@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessible Book Store</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+  .header, .footer { background-color: #005A9C; color: white; text-align: center; padding: 1rem; }
+  .nav { background-color: #007BFF; overflow: hidden; }
+  .nav a { float: left; display: block; color: white; text-align: center; padding: 14px 20px; text-decoration: none; }
+  .nav a:hover { background-color: #ddd; color: black; }
+  .content { padding: 20px; }
+  .book { background-color: white; padding: 20px; margin-bottom: 20px; }
+  .book h2, .book p { margin: 0; padding-bottom: 10px; }
+  form label, form input, form textarea, form button { display: block; width: 100%; margin-bottom: 10px; }
+  form input, form textarea { padding: 10px; }
+  form button { background-color: #005A9C; color: white; padding: 10px; border: none; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Book Store</h1>
+</div>
+
+<div class="nav">
+  <a href="#">Home</a>
+  <a href="#">New Releases</a>
+  <a href="#">Best Sellers</a>
+  <a href="#">Contact</a>
+</div>
+
+<div class="content">
+  <div class="book">
+    <h2>Title: The Great Book</h2>
+    <p>Author: John Doe</p>
+    <p>Price: $19.99</p>
+    <p>Availability: In Stock</p>
+    <p>Ratings: ★★★★☆</p>
+  </div>
+
+  <h2>User Feedback</h2>
+  <form id="feedbackForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+    
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<div class="footer">
+  <p>Book Store © 2023</p>
+</div>
+
+<script>
+document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  alert('Feedback submitted: ' + document.getElementById('name').value);
+});
+</script>
+
+</body>
+</html>
